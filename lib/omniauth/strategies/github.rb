@@ -39,7 +39,7 @@ module OmniAuth
       end
 
       extra do
-        {:raw_info => raw_info}
+        {:raw_info => raw_info.merge(:scope=>options['scope'])}
       end
 
       def raw_info
